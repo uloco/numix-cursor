@@ -72,3 +72,15 @@ I will be working on proper bash scripts for png and cursor generation to minimi
 ![](src/tcross.png "tcross")
 ![](src/dot.png "dot")
 ![](src/dotbox.png "dotbox")
+
+## Installing
+
+1. Download or clone this repository to any location
+2. From that directory:
+3. run `sudo cp -rfP theme/Numix-Cursor/ /usr/share/icons/`
+3. run `sudo update-alternatives --install /usr/share/icons/default/index.theme x-cursor-theme /usr/share/icons/Numix-Cursor/cursor.theme`
+4. run `sudo update-alternatives --config x-cursor-theme` and choose the numix theme
+5. open gnome-tweak-tool or unity-tweak-tool and choose the numix theme
+6. restart X-server
+
+Enjoy!

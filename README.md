@@ -1,7 +1,9 @@
 # numix-cursor
 An X-cursor-theme for use along with the numixproject products.
 
-This is v0.1 and there is still a lot to discuss.
+This is version 0.9.0 and there is still a lot to discuss. Please install the cursor and play a bit with it. Then
+tell me, whether you like it or not and what you would prefer to be changed to suit the numix design. 
+I additionally updated this to gnome-look.org (and variants) to see what the community says about it.
 
 This theme is tested only under Ubuntu with the Unity desktop, but should work fine with all of its' most popular desktop derivates. (KDE, xfce, lxde)
 

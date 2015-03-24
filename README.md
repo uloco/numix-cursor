@@ -79,7 +79,7 @@ I will be working on proper bash scripts for png and cursor generation to minimi
 
 1. Download or clone this repository to any location
 2. From that directory:
-3. run `sudo cp -rfP theme/Numix-Cursor/ /usr/share/icons/`
+3. run `sudo cp -rf theme/Numix-Cursor/ /usr/share/icons/`
 4. run `sudo update-alternatives --install /usr/share/icons/default/index.theme x-cursor-theme /usr/share/icons/Numix-Cursor/cursor.theme 90`
 5. run `sudo update-alternatives --config x-cursor-theme` and choose the numix theme
 6. open gnome-tweak-tool or unity-tweak-tool and choose `Numix-Cursor` as mouse cursor theme

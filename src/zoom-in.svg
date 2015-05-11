@@ -15,7 +15,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 9">
+   sodipodi:docname="zoom-in.svg"
+   inkscape:export-filename="/home/umut/Source/numix-cursor/src/zoom-in.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs4">
     <linearGradient
@@ -35,22 +38,23 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="16"
-     inkscape:cx="19.442871"
-     inkscape:cy="17.387287"
+     inkscape:zoom="8"
+     inkscape:cx="48.587212"
+     inkscape:cy="15.521984"
      inkscape:document-units="px"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer5"
      showgrid="false"
      inkscape:window-width="1861"
      inkscape:window-height="1176"
      inkscape:window-x="1979"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
-     inkscape:snap-bbox="false"
+     inkscape:snap-bbox="true"
      inkscape:object-nodes="true"
      inkscape:snap-smooth-nodes="false"
      inkscape:snap-object-midpoints="true"
-     inkscape:snap-nodes="true">
+     inkscape:snap-nodes="false"
+     inkscape:snap-global="true">
     <inkscape:grid
        type="xygrid"
        id="grid2993"
@@ -68,7 +72,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -95,6 +99,16 @@
        d="m 16.625,12.34375 c -0.828664,1.895166 -2.359877,3.411989 -4.25,4.25 l 6.5625,6.53125 4.21875,-4.28125 -6.53125,-6.5 z"
        id="rect5336"
        inkscape:connector-curvature="0" />
+    <path
+       transform="matrix(0.81215904,0,0,0.81215904,-0.71755793,-0.71755793)"
+       d="M 21,12 A 9,9 0 1 1 3,12 9,9 0 1 1 21,12 z"
+       sodipodi:ry="9"
+       sodipodi:rx="9"
+       sodipodi:cy="12"
+       sodipodi:cx="12"
+       id="path2992"
+       style="fill:none;stroke:#e8e8e8;stroke-width:1.8469289;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       sodipodi:type="arc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -102,17 +116,17 @@
      inkscape:label="Layer 5">
     <path
        sodipodi:type="arc"
-       style="fill:none;fill-opacity:1;stroke:#2d2d2d;stroke-width:1.63075959999999998;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#2d2d2d;stroke-width:1.06374938;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="path4533"
        sodipodi:cx="12"
        sodipodi:cy="12"
        sodipodi:rx="9"
        sodipodi:ry="9"
        d="M 21,12 A 9,9 0 1 1 3,12 9,9 0 1 1 21,12 z"
-       transform="matrix(0.91981673,0,0,0.91981673,-2.0094502,-2.0094502)" />
+       transform="matrix(0.94007105,0,0,0.94007105,-2.2525021,-2.2525021)" />
     <path
-       style="fill:#59c453;fill-opacity:1;stroke:#2d2d2d;stroke-width:0.50000001;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 7.3333334,3.9999999 3.3333326,0 0,3.3333336 3.333334,0 0,3.3333325 -3.333334,0 0,3.333334 -3.3333327,0 0,-3.333334 -3.3333337,0 0,-3.3333325 3.3333337,0 z"
+       style="fill:#59c453;fill-opacity:1;stroke:#2d2d2d;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 7.4615386,4.3846154 3.0769224,0 0,3.0769233 3.076923,0 0,3.0769223 -3.076923,0 0,3.076923 -3.0769226,0 0,-3.076923 -3.0769234,0 0,-3.0769223 3.0769234,0 z"
        id="path3783"
        inkscape:connector-curvature="0" />
   </g>

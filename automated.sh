@@ -58,7 +58,7 @@ do
         echo "no file $fileSource found!"
     fi
 done
-echo "$count file(s) converted
+echo "$count file(s) converted"
 
 
 

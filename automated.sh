@@ -47,7 +47,7 @@ count=0 # counter, increments each time file is converted
         # could be removed as it's not needed, but I like to
         # let the user know something every now and again ;)
 
-for fileSource in *.svg
+for fileSource in $PWD/src/*.svg
 do
     if [ -f "$fileSource" ]; then
         count=$((count+1))
@@ -73,8 +73,7 @@ echo "$count file(s) converted"
 counter=0 # counter, increments each time file is converted
           # could be removed as it's not needed, but I like to
           # let the user know something every now and again ;)
-
-# $PWD gets you the directory the script is being ran from
+          # $PWD gets you the directory the script is being ran from
 
 for fileGenerate in $PWD/src/*.cursor
   do
@@ -89,6 +88,10 @@ for fileGenerate in $PWD/src/*.cursor
   done
 
  echo "$counter file(s) generated"
+
+
+################################################################################
+
 
 
 ################################################################################

@@ -88,7 +88,7 @@ for fileGenerate in $PWD/src/*.cursor
       fi
   done
 
- echo "$counter file(s) generated
+ echo "$counter file(s) generated"
 
 
 ################################################################################

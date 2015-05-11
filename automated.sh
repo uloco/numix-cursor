@@ -52,7 +52,7 @@ do
     if [ -f "$fileSource" ]; then
         count=$((count+1))
         file=$(echo $fileSource | cut -d'.' -f1)
-        echo $count". "$fileSource" -> "$file.png
+        echo "$count". "$fileSource" -> "$file.png
         inkscape $fileSource --export-png=$file.png --export-dpi=90
     else
         echo "no file $fileSource found!"
@@ -81,7 +81,7 @@ for fileGenerate in $PWD/src/*.cursor
       if [ -f "$fileGenerate" ]; then
           counter=$((counter+1))
           file=$(echo $fileGenerate | cut -d'.' -f1)
-        echo $count"
+        echo "$count"
           xcursorgen $fileGenerate $file
       else
           echo "no file $fileGenerate found!"

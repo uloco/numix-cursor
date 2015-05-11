@@ -47,18 +47,18 @@ count=0 # counter, increments each time file is converted
         # could be removed as it's not needed, but I like to
         # let the user know something every now and again ;)
 
-for fileSource in *.svg
+for fileSource in $PWD/src/*.svg
 do
     if [ -f "$fileSource" ]; then
         count=$((count+1))
         file=$(echo $fileSource | cut -d'.' -f1)
-        echo $count". "$fileSource" -> "$file.png
+        echo "$count". "$fileSource" -> "$file.png"
         inkscape $fileSource --export-png=$file.png --export-dpi=90
     else
         echo "no file $fileSource found!"
     fi
 done
-echo "$count file(s) converted
+echo "$count file(s) converted"
 
 
 
@@ -73,20 +73,26 @@ echo "$count file(s) converted
 counter=0 # counter, increments each time file is converted
           # could be removed as it's not needed, but I like to
           # let the user know something every now and again ;)
+          # $PWD gets you the directory the script is being ran from
 
 
-for fileGenerate in *.cursor
+for fileGenerate in $PWD/src/*.cursor
   do
       if [ -f "$fileGenerate" ]; then
           counter=$((counter+1))
-          echo $counter"
-          xcursorgen $fileGenerate
+          file=$(echo $fileGenerate | cut -d'.' -f1)
+        echo "$count"
+          xcursorgen $fileGenerate $file
       else
           echo "no file $fileGenerate found!"
       fi
   done
 
-  echo "$counter file(s) generated
+ echo "$counter file(s) generated"
+
+
+################################################################################
+
 
 
 ################################################################################

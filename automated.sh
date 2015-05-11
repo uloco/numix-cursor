@@ -80,8 +80,9 @@ for fileGenerate in $PWD/src/*.cursor
   do
       if [ -f "$fileGenerate" ]; then
           counter=$((counter+1))
-          echo $counter
-          xcursorgen $fileGenerate
+          file=$(echo $fileGenerate | cut -d'.' -f1)
+        echo $count"
+          xcursorgen $fileGenerate $file
       else
           echo "no file $fileGenerate found!"
       fi

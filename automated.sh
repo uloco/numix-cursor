@@ -38,7 +38,7 @@ oldColor="#000000" # variable holds color to be replaced
       #find all .svg files in & below current directory
       #(~/script/.../.../...)
       #replace old color code w/ new one, use values held in variables.
-      find . -name '*.svg' -type f -exec sed -i 's/$oldColor/$newColor/' {} \;
+      find . -name '*.svg' -type f -exec sed -i 's/$oldColor/newColor/' {} \;
 
 ################################################################################
 
@@ -73,6 +73,7 @@ echo "$count file(s) converted"
 #GENERATE#
 ########## Grab all .cursor files for /src/ directory, pass them through
          # xcursorgen to generate files.
+set -x
 
 counter=0 # counter, increments each time file is converted
           # could be removed as it's not needed, but I like to
@@ -80,14 +81,15 @@ counter=0 # counter, increments each time file is converted
           # $PWD gets you the directory the script is being ran from
 
 
-
-OUTDIR=$PWD
+CHANGE=$PWD/src
+OUTDIR=$PWD/output
 for CURSOR in $PWD/src/*.cursor; do
 	BASENAME=$CURSOR
 	BASENAME=${BASENAME##*/}
 	BASENAME=${BASENAME%.*}
-
-	xcursorgen $CURSOR $PWD/output/$BASENAME
+	
+	counter=$((count+1))
+	(cd $CHANGE;xcursorgen $BASENAME.cursor $OUTDIR/$BASENAME)
 
 done
 

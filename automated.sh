@@ -38,7 +38,7 @@ oldColor="#000000" # variable holds color to be replaced
       #find all .svg files in & below current directory
       #(~/script/.../.../...)
       #replace old color code w/ new one, use values held in variables.
-      find . -name '*.svg' -type f -exec sed -i 's/$oldColor/newColor/' {} \;
+      find . -name '*.svg' -type f -exec sed -i 's/$oldColor/$newColor/' {} \;
 
 ################################################################################
 

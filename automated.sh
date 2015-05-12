@@ -4,7 +4,7 @@
 #written by: William Osendott
 ################################################################################
 
-set -x #comment this line out before distribution, this tells the script to print 
+set -x #remove this line before distribution, this tells the script to print 
        #everything it does to the terminal. when it prints a variable, it will 
        #print what the variable contains (instead just the variable name)
        #this makes it easier to debug the script.
@@ -15,7 +15,7 @@ set -x #comment this line out before distribution, this tells the script to prin
       # could be expanded to edit outline color & grey color as well.
 
       #get user input, save in newColor variable
-      read -p "New Color (as hex-code: #000000) " newColor
+      #read -p "New Color (as hex-code: #000000) " newColor
 
 
 ################################################################################

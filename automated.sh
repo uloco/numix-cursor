@@ -33,7 +33,7 @@ set -x #comment this line out before distribution, this tells the script to prin
       # "stroke", etc. and then replace old value w/ new one. For this, we're
       # just going to look for a hex-code and replace with a different hex-code.
 
-oldColor="#000000" # variable holds color to be replaced
+oldColor="#d64933" # variable holds color to be replaced
 
       #find all .svg files in & below current directory
       #(~/script/.../.../...)

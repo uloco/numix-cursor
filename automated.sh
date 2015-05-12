@@ -4,6 +4,10 @@
 #written by: William Osendott
 ################################################################################
 
+set -x #comment this line out before distribution, this tells the script to print 
+       #everything it does to the terminal. when it prints a variable, it will 
+       #print what the variable contains (instead just the variable name)
+       #this makes it easier to debug the script.
 
 #######
 #INPUT#

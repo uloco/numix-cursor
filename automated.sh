@@ -74,7 +74,6 @@ echo "$count file(s) converted"
 #GENERATE#
 ########## Grab all .cursor files for /src/ directory, pass them through
          # xcursorgen to generate files.
-set -x
 
 counter=0 # counter, increments each time file is converted
           # could be removed as it's not needed, but I like to
@@ -95,10 +94,6 @@ for CURSOR in $PWD/src/*.cursor; do
 done
 
  echo "$counter file(s) generated"
-
-
-################################################################################
-
 
 
 ################################################################################

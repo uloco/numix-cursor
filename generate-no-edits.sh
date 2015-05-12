@@ -81,16 +81,16 @@ counter=0 # counter, increments each time file is converted
           # $PWD gets you the directory the script is being ran from
 
 
-for fileGenerate in $PWD/src/*.cursor
-  do
-      if [ -f "$fileGenerate" ]; then
-          counter=$((counter+1))
-          file=`basename $fileGenerate .cursor`
-          xcursorgen $fileGenerate $PWD/output/$file
-      else
-          echo "no file $fileGenerate found!"
-      fi
-  done
+
+OUTDIR=$PWD
+for CURSOR in $PWD/src/*.cursor; do
+	BASENAME=$CURSOR
+	BASENAME=${BASENAME##*/}
+	BASENAME=${BASENAME%.*}
+
+	xcursorgen $CURSOR $PWD/output/$BASENAME
+
+done
 
  echo "$counter file(s) generated"
 

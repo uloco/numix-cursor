@@ -1,5 +1,5 @@
-# numix-cursor
-An X-cursor-theme for use along with the numixproject products.
+# Custom-Cursors
+An automated, customizable X-11 Cursor theme!
 
 This is version 0.9.5, we've got the script to automatically generate all the files you need and install them
 for you. We're currently working on automating the theming process itself.

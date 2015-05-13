@@ -127,10 +127,8 @@ done
   echo ""
   echo "installing cursors to ~/.icons/ directory..."
 
-# if previous version is installed, remove it (otherwise will create nested directories)
-	rm -rf ~/.icons/Numix-Cursor
 # copy new cursors to ~/.icons/ directory
-	cp -a $PWD/theme/Numix-Cursor/ ~/.icons/Numix-Cursor
+	cp $PWD/theme/Numix-Cursor/. ~/.icons/Numix-Cursor/ -R
   echo "...done"
   echo ""
   echo "please use tweak-tool to set cursor theme to Numix-Cursor"

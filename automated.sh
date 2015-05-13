@@ -4,7 +4,7 @@
 #written by: William Osendott
 ################################################################################
 
-set -x #remove this line before distribution, this tells the script to print
+#set -x #remove this line before distribution, this tells the script to print
        #everything it does to the terminal. when it prints a variable, it will
        #print what the variable contains (instead just the variable name)
        #this makes it easier to debug the script.
@@ -123,14 +123,14 @@ done
   echo "removing /src directory..."
 # remove the /src directory we created including all files inside
   rm -rf $PWD/src
-  echo ""
   echo "...done"
   echo ""
   echo "installing cursors to ~/.icons/ directory..."
 
-# copy completed cursor-theme where it needs to be
-  cp $PWD/theme/Numix-Cursor/ ~/.icons/Numix-Cursor -R
-  echo ""
+# if previous version is installed, remove it (otherwise will create nested directories)
+	rm -rf ~/.icons/Numix-Cursor
+# copy new cursors to ~/.icons/ directory
+	cp -a $PWD/theme/Numix-Cursor/ ~/.icons/Numix-Cursor
   echo "...done"
   echo ""
   echo "please use tweak-tool to set cursor theme to Numix-Cursor"

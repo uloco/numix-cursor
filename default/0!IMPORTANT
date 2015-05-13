@@ -1,0 +1,4 @@
+DO NOT EDIT FILES IN THIS DIRECTORY! 
+
+The files in this directory are the original files used by script for customization & generation. If you wish to do edits by hand, please copy these files into the /src directory
+and then run the generate-only.sh script in the main directory.

@@ -9,6 +9,12 @@ set -x #remove this line before distribution, this tells the script to print
        #print what the variable contains (instead just the variable name)
        #this makes it easier to debug the script.
 
+
+# before doing anything, go ahead and copy files from /default to /src directory for edits
+mkdir $PWD/src/
+cp $PWD/default/. $PWD/src/ -R
+
+
 #######
 #INPUT#
 ####### Get hexcode from user to use as replacement for default color. This
@@ -81,19 +87,31 @@ counter=0 # counter, increments each time file is converted
           # $PWD gets you the directory the script is being ran from
 
 
-CHANGE=$PWD/src
-OUTDIR=$PWD/output
+CHANGEDIR=$PWD/src
+OUTDIR=$PWD/theme/Numix-Cursor/cursors
 for CURSOR in $PWD/src/*.cursor; do
 	BASENAME=$CURSOR
 	BASENAME=${BASENAME##*/}
 	BASENAME=${BASENAME%.*}
 	
 	counter=$((count+1))
-	(cd $CHANGE;xcursorgen $BASENAME.cursor $OUTDIR/$BASENAME)
+	(cd $CHANGEDIR;xcursorgen $BASENAME.cursor $OUTDIR/$BASENAME)
 
 done
 
  echo "$counter file(s) generated"
+ echo ""
+ echo "removing /src directory..."
+ rm -rf $PWD/src
+ echo ""
+ echo "...done"
+ echo ""
+ echo "installing cursors to ~/.icons/ directory..."
+ cp $PWD/theme/Numix-Cursor/ ~/.icons/Numix-Cursor -R
+ echo ""
+ echo "...done"
+ echo ""
+ echo "please use tweak-tool to set cursor theme to Numix-Cursor"
 
 
 ################################################################################

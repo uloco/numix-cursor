@@ -6,7 +6,7 @@ for you. We're currently working on automating the theming process itself.
 
 This theme is tested only under Ubuntu with the Unity desktop & Arch with the Gnome desktop, but should work fine under
 other distros. You may just have to tweak where the files are installed to (or just use a symlink to link the two
-directories, ie ln -S ~/.icons/Numix-Cursors [path-they-should-be-installed])
+directories, ie ln -S ~/.icons/Numix-Cursor [path-they-should-be-installed])
 
 For the moment, the only size supported is 24px and one color scheme.
 
@@ -82,7 +82,7 @@ Original .cursor and .svg images used were created, manually, by uloco using Ink
 1. Download or clone this repository to any location
 2. From that directory:
 3. Run automate.sh and follow the prompts. Files will be automatically generated, and copied to your ~/.icons directory.
-4. Use Tweak-Tool and select "Numix-Cursors" as your cursor theme.
+4. Use Tweak-Tool and select "Numix-Cursor" as your cursor theme.
 
 Enjoy!
 

@@ -1,16 +1,17 @@
 # numix-cursor
 An X-cursor-theme for use along with the numixproject products.
 
-This is version 0.9.0 and there is still a lot to discuss. Please install the cursor and play a bit with it. Then
-tell me, whether you like it or not and what you would prefer to be changed to suit the numix design. 
-I additionally updated this to gnome-look.org (and variants) to see what the community says about it.
+This is version 0.9.5, we've got the script to automatically generate all the files you need and install them
+for you. We're currently working on automating the theming process itself.
 
-This theme is tested only under Ubuntu with the Unity desktop, but should work fine with all of its' most popular desktop derivates. (KDE, xfce, lxde)
+This theme is tested only under Ubuntu with the Unity desktop & Arch with the Gnome desktop, but should work fine under
+other distros. You may just have to tweak where the files are installed to (or just use a symlink to link the two
+directories, ie ln -S ~/.icons/Numix-Cursors [path-they-should-be-installed])
 
 For the moment, the only size supported is 24px and one color scheme.
-I generated all the x-cursor files and png images by hand, for the design I used Inkscape. For the links in the src directory, I used the most popular x-cursor themes on gnome-look.org.
 
-I will be working on proper bash scripts for png and cursor generation to minimize the work. (I could probably use some help here, because I am new to bash scripting).
+
+Original .cursor and .svg images used were created, manually, by uloco using Inkscape and a text editor.
 
 ## Current design preview
 

@@ -1,3 +1,10 @@
+#!/bin/bash
+# 
+# this script is for manual-edits only! you should have copied the files from /default to /src and performed your edits manually
+# using Inkscape or similar then run this script.
+#
+# -william osendott 
+#
 ######
 #PNGS#
 ###### Generate .png files from .svg files in /src/ dir
@@ -24,9 +31,6 @@ echo "$count file(s) converted"
 ################################################################################
 
 
-#!/bin/bash
-# this script is for manual-edits only! you should have copied the files from /default to /src and performed your edits manually
-# using Inkscape or similar then run this script.
 
 ##########
 #GENERATE#

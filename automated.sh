@@ -51,9 +51,9 @@ fi
 # this variable holds color to be replaced
   oldColor="#d64933"
 
-      #find all .svg files in & below current directory
-      #(~/script/.../.../...)
-      #replace old color code w/ new one, use values held in variables.
+#find all .svg files in & below current directory
+#(~/script/.../.../...)
+#replace old color code w/ new one, use values held in variables.
       (cd $PWD/src;find . -name '*.svg' -type f -exec sed -i 's/$oldColor/$newColor/' {} \;)
 
 ################################################################################

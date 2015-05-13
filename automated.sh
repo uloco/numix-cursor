@@ -54,8 +54,14 @@ fi
 #find all .svg files in & below current directory
 #(~/script/.../.../...)
 #replace old color code w/ new one, use values held in variables.
-      (cd $PWD/src;find . -name '*.svg' -type f -exec sed -i 's/$oldColor/$newColor/' {} \;)
+(cd $PWD/src;
+	find . -type f -name '*.svg' -print0 | while IFS= read -r -d '' file; do
 
+	if [[ `grep "$oldColor" "$file"` ]]; then
+		echo "Replacing $oldColor with $newColor in $file"
+		sed -i "s/$oldColor/$newColor/g" "$file"
+	fi
+done)
 ################################################################################
 
 

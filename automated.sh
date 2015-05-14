@@ -21,9 +21,44 @@
 #INPUT#
 ####### Get hexcode from user to use as replacement for default color. This
       # could be expanded to edit outline color & grey color as well.
-
+      echo "Choose highlighting color, your options are: "
+      echo "default, blue, brown, green, grey, orange, pink, purple, red, yellow"
+      echo "or any value in hex-code, prefixed with #"
       # get user input, save in newColor variable
-      read -p "New Color (as hex-code, default is #d64933:) " newColor
+      read -p "New Color: " newColor
+
+case "$newColor" in
+    "default" )
+        newColor=#d64933 
+        ;;
+    "blue" )
+        newColor=#42a5f5 
+        ;;
+    "brown" )
+        newColor=#8d6e63 
+        ;;
+    "green" )
+        newColor=#66bb6a 
+        ;;
+    "grey" )
+        newColor=#bdbdbd 
+        ;;
+    "orange" )
+        newColor=#f57c00 
+        ;;
+    "pink" )
+        newColor=#f06292 
+        ;;
+    "purple" )
+        newColor=#7e57c2 
+        ;;
+    "red" )
+        newColor=#ef5350 
+        ;;
+    "yellow" )
+        newColor=#ffca28 
+        ;;
+esac
 
 # if there's no new color supplied, use original color
 if [ -z "$newColor" ]

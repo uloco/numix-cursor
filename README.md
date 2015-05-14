@@ -1,88 +1,91 @@
-# numix-cursor
-An X-cursor-theme for use along with the numixproject products.
+# Custom-Cursors
+An automated, customizable X-11 Cursor theme!
 
-This is version 0.9.0 and there is still a lot to discuss. Please install the cursor and play a bit with it. Then
-tell me, whether you like it or not and what you would prefer to be changed to suit the numix design. 
-I additionally updated this to gnome-look.org (and variants) to see what the community says about it.
+This is version 0.9.5, we've got the script to automatically generate all the files you need and install them
+for you. We're currently working on automating the theming process itself.
 
-This theme is tested only under Ubuntu with the Unity desktop, but should work fine with all of its' most popular desktop derivates. (KDE, xfce, lxde)
+This theme is tested only under Ubuntu with the Unity desktop & Arch with the Gnome desktop, but should work fine under
+other distros. You may just have to tweak where the files are installed to (or just use a symlink to link the two
+directories, ie ln -S ~/.icons/Numix-Cursor [path-they-should-be-installed])
 
-For the moment, the only size supported is 24px and one color scheme.
-I generated all the x-cursor files and png images by hand, for the design I used Inkscape. For the links in the src directory, I used the most popular x-cursor themes on gnome-look.org.
+For the moment, the only size supported is 24px and the orange color is customizable.
 
-I will be working on proper bash scripts for png and cursor generation to minimize the work. (I could probably use some help here, because I am new to bash scripting).
+
+Original .cursor and .svg images used were created, manually, by uloco using Inkscape and a text editor.
 
 ## Current design preview
 
-![](src/left_ptr.png "left_ptr")
-![](src/left_ptr_watch_01.png "left_ptr_watch")
-![](animation/left_ptr_watch.gif "left_ptr_watch-animated")
-![](src/copy.png "copy")
-![](src/move.png "move")
-![](src/link.png "link")
-![](src/circle.png "circle")
-![](src/context-menu.png "context-menu")
-![](src/right_ptr.png "right_ptr")
-![](src/up-arrow.png "up-arrow")
-![](src/watch_01.png "watch")
-![](animation/watch.gif "watch-animated")
-![](src/hand2.png "hand2")
-![](src/openhand.png "openhand")
-![](src/dnd-none.png "dnd-none")
-![](src/dnd-copy.png "dnd-copy")
-![](src/dnd-move.png "dnd-move")
-![](src/dnd-link.png "dnd-link")
-![](src/dnd-ask.png "dnd-ask")
-![](src/xterm.png "xterm")
-![](src/vertical-text.png "vertical-text")
-![](src/color-picker.png "color-picker")
-![](src/pencil.png "pencil")
-![](src/plus.png "plus")
-![](src/crossed_circle.png "crossed_circle")
-![](src/question_arrow.png "question_arrow")
-![](src/zoom-in.png "zoom-in")
-![](src/zoom-out.png "zoom-out")
-![](src/X_cursor.png "X_cursor")
-![](src/pirate.png "pirate")
-![](src/sb_v_double_arrow.png "sb_v_double_arrow")
-![](src/sb_h_double_arrow.png "sb_h_double_arrow")
-![](src/bd_double_arrow.png "bd_double_arrow")
-![](src/fd_double_arrow.png "fd_double_arrow")
-![](src/size_all.png "size_all")
-![](src/sb_down_arrow.png "sb_down_arrow")
-![](src/sb_left_arrow.png "sb_left_arrow")
-![](src/sb_right_arrow.png "sb_right_arrow")
-![](src/sb_up_arrow.png "sb_up_arrow")
-![](src/top_left_corner.png "top_left_corner")
-![](src/top_right_corner.png "top_right_corner")
-![](src/bottom_left_corner.png "bottom_left_corner")
-![](src/bottom_right_corner.png "bottom_right_corner")
-![](src/top_side.png "top_side")
-![](src/bottom_side.png "bottom_side")
-![](src/left_side.png "left_side")
-![](src/right_side.png "right_side")
-![](src/ll_angle.png "ll_angle")
-![](src/lr_angle.png "lr_angle")
-![](src/ul_angle.png "ul_angle")
-![](src/ur_angle.png "ur_angle")
-![](src/top_tee.png "top_tee")
-![](src/bottom_tee.png "bottom_tee")
-![](src/left_tee.png "left_tee")
-![](src/right_tee.png "right_tee")
-![](src/cross.png "cross")
-![](src/crosshair.png "crosshair")
-![](src/tcross.png "tcross")
-![](src/dot.png "dot")
-![](src/dotbox.png "dotbox")
+![](previews/left_ptr.png "left_ptr")
+![](previews/left_ptr_watch_01.png "left_ptr_watch")
+![](previews/left_ptr_watch.gif "left_ptr_watch-animated")
+![](previews/copy.png "copy")
+![](previews/move.png "move")
+![](previews/link.png "link")
+![](previews/circle.png "circle")
+![](previews/context-menu.png "context-menu")
+![](previews/right_ptr.png "right_ptr")
+![](previews/up-arrow.png "up-arrow")
+![](previews/watch_01.png "watch")
+![](previews/watch.gif "watch-animated")
+![](previews/hand2.png "hand2")
+![](previews/openhand.png "openhand")
+![](previews/dnd-none.png "dnd-none")
+![](previews/dnd-copy.png "dnd-copy")
+![](previews/dnd-move.png "dnd-move")
+![](previews/dnd-link.png "dnd-link")
+![](previews/dnd-ask.png "dnd-ask")
+![](previews/xterm.png "xterm")
+![](previews/vertical-text.png "vertical-text")
+![](previews/color-picker.png "color-picker")
+![](previews/pencil.png "pencil")
+![](previews/plus.png "plus")
+![](previews/crossed_circle.png "crossed_circle")
+![](previews/question_arrow.png "question_arrow")
+![](previews/zoom-in.png "zoom-in")
+![](previews/zoom-out.png "zoom-out")
+![](previews/X_cursor.png "X_cursor")
+![](previews/pirate.png "pirate")
+![](previews/sb_v_double_arrow.png "sb_v_double_arrow")
+![](previews/sb_h_double_arrow.png "sb_h_double_arrow")
+![](previews/bd_double_arrow.png "bd_double_arrow")
+![](previews/fd_double_arrow.png "fd_double_arrow")
+![](previews/size_all.png "size_all")
+![](previews/sb_down_arrow.png "sb_down_arrow")
+![](previews/sb_left_arrow.png "sb_left_arrow")
+![](previews/sb_right_arrow.png "sb_right_arrow")
+![](previews/sb_up_arrow.png "sb_up_arrow")
+![](previews/top_left_corner.png "top_left_corner")
+![](previews/top_right_corner.png "top_right_corner")
+![](previews/bottom_left_corner.png "bottom_left_corner")
+![](previews/bottom_right_corner.png "bottom_right_corner")
+![](previews/top_side.png "top_side")
+![](previews/bottom_side.png "bottom_side")
+![](previews/left_side.png "left_side")
+![](previews/right_side.png "right_side")
+![](previews/ll_angle.png "ll_angle")
+![](previews/lr_angle.png "lr_angle")
+![](previews/ul_angle.png "ul_angle")
+![](previews/ur_angle.png "ur_angle")
+![](previews/top_tee.png "top_tee")
+![](previews/bottom_tee.png "bottom_tee")
+![](previews/left_tee.png "left_tee")
+![](previews/right_tee.png "right_tee")
+![](previews/cross.png "cross")
+![](previews/crosshair.png "crosshair")
+![](previews/tcross.png "tcross")
+![](previews/dot.png "dot")
+![](previews/dotbox.png "dotbox")
+
 
 ## Installing
 
-1. Download or clone this repository to any location
+1. Download custom-cursors.tar.gz from the repo and extract to any directory
 2. From that directory:
-3. run `sudo cp -rf theme/Numix-Cursor/ /usr/share/icons/`
-4. run `sudo update-alternatives --install /usr/share/icons/default/index.theme x-cursor-theme /usr/share/icons/Numix-Cursor/cursor.theme 90`
-5. run `sudo update-alternatives --config x-cursor-theme` and choose the numix theme
-6. open gnome-tweak-tool or unity-tweak-tool and choose `Numix-Cursor` as mouse cursor theme
-7. restart X-server
+3. Run automate.sh and follow the prompts. Files will be automatically generated, and copied to your ~/.icons directory.
+4. Use Tweak-Tool and select "Numix-Cursor" as your cursor theme.
 
 Enjoy!
+
+## NOTE: 
+if you wish to edit the files manually using inkscape copy the files in /default to /src and make
+your edits then run generate-only.sh to convert, generate, and install cursors.

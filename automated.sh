@@ -4,18 +4,33 @@
 #written by: William Osendott
 ################################################################################
 
-set -x #remove this line before distribution, this tells the script to print 
-       #everything it does to the terminal. when it prints a variable, it will 
+#set -x #remove this line before distribution, this tells the script to print
+       #everything it does to the terminal. when it prints a variable, it will
        #print what the variable contains (instead just the variable name)
        #this makes it easier to debug the script.
+
+
+# create /src directory in working directory
+  mkdir $PWD/src/ #create /src directory first
+
+# copy all files in .../default to .../src directory
+  cp $PWD/default/. $PWD/src/ -R
+
 
 #######
 #INPUT#
 ####### Get hexcode from user to use as replacement for default color. This
       # could be expanded to edit outline color & grey color as well.
 
-      #get user input, save in newColor variable
-      #read -p "New Color (as hex-code: #000000) " newColor
+      # get user input, save in newColor variable
+      read -p "New Color (as hex-code, default is #d64933:) " newColor
+
+# if there's no new color supplied, use original color
+if [ -z "$newColor" ]
+  then
+    echo "No color supplied, using default..."
+    newColor=#d64933
+fi
 
 
 ################################################################################
@@ -33,14 +48,20 @@ set -x #remove this line before distribution, this tells the script to print
       # "stroke", etc. and then replace old value w/ new one. For this, we're
       # just going to look for a hex-code and replace with a different hex-code.
 
+# this variable holds color to be replaced
+  oldColor="#d64933"
 
-#oldColor="#d64933" # variable holds color to be replaced
+#find all .svg files in & below current directory
+#(~/script/.../.../...)
+#replace old color code w/ new one, use values held in variables.
+(cd $PWD/src;
+	find . -type f -name '*.svg' -print0 | while IFS= read -r -d '' file; do
 
-      #find all .svg files in & below current directory
-      #(~/script/.../.../...)
-      #replace old color code w/ new one, use values held in variables.
-#find . -name '*.svg' -type f -exec sed -i 's/$oldColor/newColor/' {} \;
-
+	if [[ `grep "$oldColor" "$file"` ]]; then
+		echo "Replacing $oldColor with $newColor in $file"
+		sed -i "s/$oldColor/$newColor/g" "$file"
+	fi
+done)
 ################################################################################
 
 
@@ -52,18 +73,22 @@ count=0 # counter, increments each time file is converted
         # could be removed as it's not needed, but I like to
         # let the user know something every now and again ;)
 
-for fileSource in $PWD/src/*.svg
-do
-    if [ -f "$fileSource" ]; then
+# open each .svg file in the /src directory, strip away just the filename
+# then pass to inkscape to convert to .png using original filename
+# increment counter, display total count at end of process
+  for fileSource in $PWD/src/*.svg
+    do
+      if [ -f "$fileSource" ]; then
         count=$((count+1))
         file=$(echo $fileSource | cut -d'.' -f1)
         echo "$count". "$fileSource" -> "$file.png"
         inkscape $fileSource --export-png=$file.png --export-dpi=90
-    else
+      else
         echo "no file $fileSource found!"
-    fi
-done
-echo "$count file(s) converted"
+      fi
+  done
+
+  echo "$count file(s) converted"
 
 
 
@@ -80,20 +105,39 @@ counter=0 # counter, increments each time file is converted
           # let the user know something every now and again ;)
           # $PWD gets you the directory the script is being ran from
 
+# set variable for which directory to cd into (xcursorgen problem w/o this)
+# set directory to export generated files to
+  CHANGEDIR=$PWD/src
+  OUTDIR=$PWD/theme/Numix-Cursor/cursors
 
-CHANGE=$PWD/src
-OUTDIR=$PWD/output
-for CURSOR in $PWD/src/*.cursor; do
-	BASENAME=$CURSOR
-	BASENAME=${BASENAME##*/}
-	BASENAME=${BASENAME%.*}
-	
-	counter=$((count+1))
-	(cd $CHANGE;xcursorgen $BASENAME.cursor $OUTDIR/$BASENAME)
+# for each .cursor file, strip away everything except the name of cursor
+  for CURSOR in $PWD/src/*.cursor; do
+    BASENAME=$CURSOR
+    BASENAME=${BASENAME##*/}
+    BASENAME=${BASENAME%.*}
+
+# increment counter, change directories and generate cursors
+  counter=$((count+1))
+  (cd $CHANGEDIR;xcursorgen $BASENAME.cursor $OUTDIR/$BASENAME)
 
 done
 
- echo "$counter file(s) generated"
+
+# let the user know what we've done
+  echo "$counter file(s) generated"
+  echo ""
+  echo "removing /src directory..."
+# remove the /src directory we created including all files inside
+  rm -rf $PWD/src
+  echo "...done"
+  echo ""
+  echo "installing cursors to ~/.icons/ directory..."
+
+# copy new cursors to ~/.icons/ directory
+	cp $PWD/theme/Numix-Cursor/. ~/.icons/Numix-Cursor/ -R
+  echo "...done"
+  echo ""
+  echo "please use tweak-tool to set cursor theme to Numix-Cursor"
 
 
 ################################################################################

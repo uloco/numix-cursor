@@ -27,6 +27,7 @@
       # get user input, save in newColor variable
       read -p "New Color: " newColor
 
+# custom hardcoded colors
 case "$newColor" in
     "default" )
         newColor=#d64933 
@@ -65,6 +66,14 @@ if [ -z "$newColor" ]
   then
     echo "No color supplied, using default..."
     newColor=#d64933
+fi
+
+# checking if the value is a valid hexcode
+if ! [[ $newColor =~ ^#[0-9A-Fa-f]{6}$ ]]; then
+   echo -e \
+       "Error! The color: $newColor is an invalid hex value.\n" \
+       "\rBe sure to use valid hex values with six digits and prefix (e.g. #000000)."
+       exit 1
 fi
 
 

@@ -134,6 +134,7 @@ done
   echo "installing cursors to ~/.icons/ directory..."
 
 # copy new cursors to ~/.icons/ directory
+    mkdir ~/.icons
 	cp $PWD/theme/Numix-Cursor/. ~/.icons/Numix-Cursor/ -R
   echo "...done"
   echo ""

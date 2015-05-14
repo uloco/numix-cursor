@@ -79,7 +79,7 @@ Original .cursor and .svg images used were created, manually, by uloco using Ink
 
 ## Installing
 
-1. Download or clone this repository to any location
+1. Download custom-cursors.tar.gz from the repo and extract to any directory
 2. From that directory:
 3. Run automate.sh and follow the prompts. Files will be automatically generated, and copied to your ~/.icons directory.
 4. Use Tweak-Tool and select "Numix-Cursor" as your cursor theme.
@@ -87,5 +87,5 @@ Original .cursor and .svg images used were created, manually, by uloco using Ink
 Enjoy!
 
 ## NOTE: 
-if you wish to edit the files manually using inkscape (currently only working method) copy the files in /default to /src and make
+if you wish to edit the files manually using inkscape copy the files in /default to /src and make
 your edits then run generate-only.sh to convert, generate, and install cursors.

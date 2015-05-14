@@ -8,7 +8,7 @@ This theme is tested only under Ubuntu with the Unity desktop & Arch with the Gn
 other distros. You may just have to tweak where the files are installed to (or just use a symlink to link the two
 directories, ie ln -S ~/.icons/Numix-Cursor [path-they-should-be-installed])
 
-For the moment, the only size supported is 24px and one color scheme.
+For the moment, the only size supported is 24px and the orange color is customizable.
 
 
 Original .cursor and .svg images used were created, manually, by uloco using Inkscape and a text editor.

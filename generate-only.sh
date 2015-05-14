@@ -63,6 +63,7 @@ done
  echo "...done"
  echo ""
  echo "installing cursors to ~/.icons/ directory..."
+ mkdir ~/.icons
  cp $PWD/theme/Numix-Cursor/ ~/.icons/Numix-Cursor -R
  echo ""
  echo "...done"

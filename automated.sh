@@ -21,11 +21,16 @@
 #INPUT#
 ####### Get hexcode from user to use as replacement for default color. This
       # could be expanded to edit outline color & grey color as well.
-      echo "Choose highlighting color, your options are: "
+      echo "Would you prefer a light or dark theme?"
+      read -p "Theme Style (light): " themeStyle
+      printf "\n"
+
+      echo "Choose highlighting color: "
       echo "default, blue, brown, green, grey, orange, pink, purple, red, yellow"
       echo "or any value in hex-code, prefixed with #"
       # get user input, save in newColor variable
-      read -p "New Color: " newColor
+      read -p "New Color (default): " newColor
+      printf "\n"
 
 # custom hardcoded colors
 case "$newColor" in
@@ -91,6 +96,30 @@ fi
       # themselves are plain-text, so you would just have to find "outline" or
       # "stroke", etc. and then replace old value w/ new one. For this, we're
       # just going to look for a hex-code and replace with a different hex-code.
+
+# light / dark theme
+if [[ $themeStyle == "d" || $themeStyle == "dark" ]]; then
+
+    (cd $PWD/src;
+        find . -type f -name '*.svg' -print0 | while IFS= read -r -d '' file; do
+
+        if [[ `grep "$oldColor" "$file"` ]]; then
+            # White to red (for saving color)
+            echo "Replacing #e8e8e8 with #ff0000 in $file"
+            sed -i "s/#e8e8e8/#ff0000/g" "$file"
+            # Black to White
+            echo "Replacing #2d2d2d with #e8e8e8 in $file"
+            sed -i "s/#2d2d2d/#e8e8e8/g" "$file"
+            # Red to black
+            echo "Replacing #ff0000 with #2d2d2d in $file"
+            sed -i "s/#ff0000/#2d2d2d/g" "$file"
+            # White to black (for xterm cursor)
+            echo "Replacing #ffffff with #000000 in $file"
+            sed -i "s/#ffffff/#000000/g" "$file"
+        fi
+    done)
+fi
+
 
 # this variable holds color to be replaced
   oldColor="#d64933"

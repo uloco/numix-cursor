@@ -9,12 +9,9 @@
        #print what the variable contains (instead just the variable name)
        #this makes it easier to debug the script.
 
-
-# create /src directory in working directory
-  mkdir $PWD/src/ #create /src directory first
-
-# copy all files in .../default to .../src directory
-  cp $PWD/default/. $PWD/src/ -R
+# extract source & theme files for use
+  tar -xzf src.tar.gz
+  tar -xzf theme.tar.gz
 
 
 #######
@@ -133,6 +130,7 @@ fi
 	if [[ `grep "$oldColor" "$file"` ]]; then
 		echo "Replacing $oldColor with $newColor in $file"
 		sed -i "s/$oldColor/$newColor/g" "$file"
+		wait
 	fi
 done)
 ################################################################################
@@ -156,6 +154,7 @@ count=0 # counter, increments each time file is converted
         file=$(echo $fileSource | cut -d'.' -f1)
         echo "$count". "$fileSource" -> "$file.png"
         inkscape $fileSource --export-png=$file.png --export-dpi=90
+	wait
       else
         echo "no file $fileSource found!"
       fi
@@ -192,25 +191,22 @@ counter=0 # counter, increments each time file is converted
 # increment counter, change directories and generate cursors
   counter=$((count+1))
   (cd $CHANGEDIR;xcursorgen $BASENAME.cursor $OUTDIR/$BASENAME)
-
+wait
 done
 
 
 # let the user know what we've done
   echo "$counter file(s) generated"
   echo ""
-  echo "removing /src directory..."
+  echo "Installing theme, removing source files..."
+# copy ./theme/Numix-Cursor to ~/.icons
+  mkdir ~/.icons
+  cp $PWD/theme/Numix-Cursor/. ~/.icons/Numix-Cursor/ -R
+  wait
 # remove the /src directory we created including all files inside
   rm -rf $PWD/src
+  rm -rf $PWD/theme
   echo "...done"
-  echo ""
-  echo "installing cursors to ~/.icons/ directory..."
-
-# copy new cursors to ~/.icons/ directory
-    mkdir ~/.icons
-	cp $PWD/theme/Numix-Cursor/. ~/.icons/Numix-Cursor/ -R
-  echo "...done"
-  echo ""
   echo "please use tweak-tool to set cursor theme to Numix-Cursor"
 
 

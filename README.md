@@ -87,5 +87,4 @@ Original .cursor and .svg images used were created, manually, by uloco using Ink
 Enjoy!
 
 ## NOTE: 
-if you wish to edit the files manually using inkscape copy the files in /default to /src and make
-your edits then run generate-only.sh to convert, generate, and install cursors.
+if you wish to edit the files manually using inkscape extract the src.tar.gz archive, make your edits then run generate-only.sh

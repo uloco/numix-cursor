@@ -1,7 +1,7 @@
 # Custom-Cursors
 An automated, customizable X-11 Cursor theme!
 
-This is version 0.9.5, we've got the script to automatically generate all the files you need and install them
+This is version 0.9.8, we've got the script to automatically generate all the files you need and install them
 for you. We're currently working on automating the theming process itself.
 
 This theme is tested only under Ubuntu with the Unity desktop & Arch with the Gnome desktop, but should work fine under

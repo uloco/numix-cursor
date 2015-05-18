@@ -10,8 +10,10 @@ directories, ie ln -S ~/.icons/Numix-Cursor [path-they-should-be-installed])
 
 For the moment, the only size supported is 24px and the orange color is customizable.
 
+You can find the most-recent (but possibly unstable) version in the testing repo here:
+https://github.com/osendott/custom_cursor_testing
 
-Original .cursor and .svg images used were created, manually, by uloco using Inkscape and a text editor.
+We recommend however, you use the stable version.
 
 ## Current design preview
 

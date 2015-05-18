@@ -68,6 +68,7 @@ case $tmpColor in
   8) newColor="#ef5350" ;;
   9) newColor="#ffca28" ;;
   10) get_Color
+	wait
 
 if ! [[ $usrColor =~ ^#[0-9A-Fa-f]{6}$ ]]; then
     usrColor=""

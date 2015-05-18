@@ -71,12 +71,11 @@ case $tmpColor in
   10) get_Color
 	wait
 
-if ! [[ $usrColor =~ ^#[0-9A-Fa-f]{6}$ ]]; then
+until [[ $usrColor =~ ^#[0-9A-Fa-f]{6}$ ]] ; do 
     usrColor=""
     get_Color
-  else
-    newColor=$usrColor
-fi ;;
+ done
+    newColor=$usrColor ;;
 esac
 
 

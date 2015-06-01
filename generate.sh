@@ -11,7 +11,7 @@
 type "inkscape" >/dev/null 2>&1 || { echo >&2 "Inkscape required for script to operate..."; exit 1; }
 type "xcursorgen" >/dev/null 2>&1 || { echo >&2 "Xcursorgen required for script to operate..."; exit 1; }
 type "dialog" >/dev/null 2>&1 || { echo >&2 "Dialog required for script to operate..."; exit 1; }
-type "gksudo" >/dev/null 2>&1 || { echo >&2 "Dialog required for script to operate..."; exit 1; }
+type "gksudo" >/dev/null 2>&1 || { echo >&2 "gksudo required for script to operate..."; exit 1; }
 
 #########################
 # progress bar function #

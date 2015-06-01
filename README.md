@@ -6,6 +6,7 @@ This is version 0.9.9-3
 This theme is tested only under Ubuntu with the Unity desktop & Arch with the Gnome desktop, but should work fine under
 other distros. 
 
+<<<<<<< Updated upstream
 For the moment, the only size supported is 24px and the orange color is customizable.
 
 You can find the most-recent (but possibly unstable) version in the testing repo here:

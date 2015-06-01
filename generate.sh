@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###############################################
-# Custom Cursors v0.9.9-3 reWrite 21 MAY 2015 #
+# Custom Cursors v0.9.9-4 CODEBASE: MAY 2015  #
 # by: William Osendott & Umut Topuzoglu       #
 ###############################################
 

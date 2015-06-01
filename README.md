@@ -1,12 +1,10 @@
 # Custom-Cursors
 An automated, customizable X-11 Cursor theme!
 
-This is version 0.9.8, we've got the script to automatically generate all the files you need and install them
-for you. We're currently working on automating the theming process itself.
+This is version 0.9.9-3
 
 This theme is tested only under Ubuntu with the Unity desktop & Arch with the Gnome desktop, but should work fine under
-other distros. You may just have to tweak where the files are installed to (or just use a symlink to link the two
-directories, ie ln -S ~/.icons/Numix-Cursor [path-they-should-be-installed])
+other distros. 
 
 For the moment, the only size supported is 24px and the orange color is customizable.
 
@@ -14,6 +12,9 @@ You can find the most-recent (but possibly unstable) version in the testing repo
 https://github.com/osendott/custom_cursor_testing
 
 We recommend however, you use the stable version.
+=======
+For the moment, the only size supported is 24px
+>>>>>>> Stashed changes
 
 ## Current design preview
 
@@ -83,10 +84,7 @@ We recommend however, you use the stable version.
 
 1. Download custom-cursors.tar.gz from the repo and extract to any directory
 2. From that directory:
-3. Run automate.sh and follow the prompts. Files will be automatically generated, and copied to your ~/.icons directory.
+3. Run generate.sh and follow the prompts. Files will be automatically generated, and copied to /usr/share/icons directory.
 4. Use Tweak-Tool and select "custom-cursors" as your cursor theme.
 
 Enjoy!
-
-## NOTE: 
-if you wish to edit the files manually using inkscape extract the src.tar.gz archive, make your edits then run generate-only.sh

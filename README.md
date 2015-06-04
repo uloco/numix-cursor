@@ -4,14 +4,14 @@ An automated, customizable X-11 Cursor theme!
 This is version 0.9.9-4 and is currently up to date with testing version.
 
 This theme is tested only under Ubuntu with the Unity desktop & Arch with the Gnome desktop, but should work fine under
-other distros. 
+other distros/DE's.
 
 For the moment, the only size supported is 24px
 
-You can find the most-recent (but possibly unstable) version in the testing repo here:
+You can find the most-recent version as well as any issues we're working on in the testing repo here:
 https://github.com/osendott/custom_cursor_testing
 
-We recommend however, you use the stable version.
+If you encounter any problems, please post your issues to THIS repo and/or e-mail, it will be greatly appreciated.
 
 
 ## Current design preview
@@ -82,7 +82,7 @@ We recommend however, you use the stable version.
 
 1. Download custom-cursors.tar.gz from the repo and extract to any directory
 2. From that directory:
-3. Run generate.sh and follow the prompts. Files will be automatically generated, and copied to /usr/share/icons directory.
-4. Use Tweak-Tool and select "custom-cursors" as your cursor theme.
+Run generate.sh and follow the prompts. Files will be automatically generated, and copied to /usr/share/icons        directory.
+3. Use Tweak-Tool and select "custom-cursors" as your cursor theme.
 
 Enjoy!

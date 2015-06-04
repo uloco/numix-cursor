@@ -1,9 +1,9 @@
 #!/bin/bash
 
-###############################################
-# Custom Cursors v0.9.9-4 CODEBASE: MAY 2015  #
-# by: William Osendott & Umut Topuzoglu       #
-###############################################
+############################################### #
+# Custom Cursors v0.9.9-4 CODEBASE: 21 MAY 2015 #
+# by: William Osendott & Umut Topuzoglu         #
+################################################# 
 
 ######################
 # Check dependencies # (I'm sure this can be improved? need to atleast add dialogs explaining why it's exiting)
@@ -55,7 +55,7 @@ esac
 # Variables #
 #############
 scriptNAME="Custom Cursors"
-scriptVER="0.9.9-3"
+scriptVER="0.9.9-4"
 count="0"
 sourceDIR="$PWD/src"
 outputDIR="$PWD/theme/custom_cursors/cursors"
@@ -173,7 +173,7 @@ done
 ###########################
 # install generated files #
 ###########################
-usrPassword="$( gksudo --print-pass --message 'Installing to usr/share/icons requires sudo password. Type your password, or press Cancel to about.' -- : 2>/dev/null )"
+usrPassword="$( gksudo --print-pass --message 'Installing to usr/share/icons requires sudo password. Type your password, or press Cancel to abort.' -- : 2>/dev/null )"
 
  # Check for null entry or cancellation.
 if [[ ${?} != 0 || -z ${usrPassword} ]]
@@ -198,5 +198,5 @@ echo -e $usrPassword | sudo -S cp $PWD/theme/custom_cursors/. /usr/share/icons/c
 ##################################
 # display exit message & cleanup #
 ##################################
-dialog --backtitle "$scriptNAME $scriptVER" --title "Thank You!" --msgbox "Cursor files have been generated and installed to your ~/.icons directory. You can use tweak-tool to set cursor theme to Custom-Cursors. Enjoy!" 8 50
+dialog --backtitle "$scriptNAME $scriptVER" --title "Thank You!" --msgbox "Cursor files have been generated and installed to your /usr/share/icons directory. You can use tweak-tool to set cursor theme to Custom-Cursors. Enjoy!" 8 50
 cleanup
